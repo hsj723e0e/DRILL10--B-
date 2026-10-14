@@ -38,19 +38,19 @@ class Zombie:
             self.x, self.y, frame_width// 2, frame_height // 2)
 class smallBallon():
     def __init__(self):
-        self.x, self.y = random.randint(100,700), 90
+        self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball21x21.png')
     def update(self):
-        self.y += 5
+        pass
     def draw(self):
         self.image.draw(self.x, self.y)
 
 class bigBallon():
     def __init__(self):
-        self.x, self.y = random.randint(100,700), 90
+        self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball41x41.png')
     def update(self):
-        self.y += 5
+        pass
     def draw(self):
         self.image.draw(self.x, self.y)
 
@@ -68,7 +68,13 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
-    
+
+    smallballons = [smallBallon() for i in range(10)]
+    world += smallballons
+
+    bigballons = [bigBallon() for i in range(10)]
+    world += bigballons
+
     global running
     running = True
 
