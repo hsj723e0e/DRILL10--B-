@@ -40,6 +40,7 @@ class smallBallon():
     def __init__(self):
         self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball21x21.png')
+        self.speed = random.randint(3, 5)
     def update(self):
         self.y += 5
         if(self.y > 550):
@@ -51,6 +52,7 @@ class bigBallon():
     def __init__(self):
         self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball41x41.png')
+        self.speed = random.randint(3, 5)
     def update(self):
         self.y += 5
         if(self.y > 550):
