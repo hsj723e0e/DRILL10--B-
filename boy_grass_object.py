@@ -37,10 +37,14 @@ class Zombie:
         self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height,
             self.x, self.y, frame_width// 2, frame_height // 2)
 class smallBallon():
-    pass
+    def __init__(self):
+        self.x, self.y = random.randint(100,700), 90
+        self.image = load_image('ball21x21.png')
 
 class bigBallon():
-    pass
+    def __init__(self):
+        self.x, self.y = random.randint(100,700), 90
+        self.image = load_image('ball41x41.png')
 
 def reset_world():
     global world
