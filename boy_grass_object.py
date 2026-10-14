@@ -29,14 +29,16 @@ class smallBallon():
         self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball21x21.png')
         self.speed = random.randint(3, 5)
-        self.tinyMoveSpeed = random.randint(-2,2)
+        self.isArrive = False
 
     def update(self):
         self.y += self.speed
         if(self.y > 550):
             self.y = 550
             self.speed = 0
-        elif(self.y == 550):
+            self.isArrive = True
+        elif(self.isArrive == True):
+            self.tinyMoveSpeed = random.randint(-2,2)
             self.y += self.tinyMoveSpeed
 
     def draw(self):
