@@ -41,7 +41,7 @@ class smallBallon():
         self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball21x21.png')
     def update(self):
-        pass
+        self.y += 5
     def draw(self):
         self.image.draw(self.x, self.y)
 
@@ -50,7 +50,7 @@ class bigBallon():
         self.x, self.y = random.randint(30,750), 90
         self.image = load_image('ball41x41.png')
     def update(self):
-        pass
+        self.y += 5
     def draw(self):
         self.image.draw(self.x, self.y)
 
