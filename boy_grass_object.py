@@ -38,8 +38,10 @@ class smallBallon():
             self.speed = 0
             self.isArrive = True
         elif(self.isArrive == True):
-            self.tinyMoveSpeed = random.randint(-2,2)
+            self.tinyMoveSpeed = random.randint(-1,1)
             self.y += self.tinyMoveSpeed
+        elif((self.isArrive == True) and (self.y < 500 or self.y > 600)):
+            self.y = 550
 
     def draw(self):
         self.image.draw(self.x, self.y)
@@ -56,9 +58,11 @@ class bigBallon():
             self.y = 550
             self.speed = 0
             self.isArrive = True
-        if(self.isArrive == True):
-            self.tinyMoveSpeed = random.randint(-2,2)
+        elif(self.isArrive == True):
+            self.tinyMoveSpeed = random.randint(-1,1)
             self.y += self.tinyMoveSpeed
+        elif((self.isArrive == True) and (self.y < 500 or self.y > 600)):
+            self.y = 550
 
     def draw(self):
         self.image.draw(self.x, self.y)
