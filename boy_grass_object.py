@@ -42,6 +42,8 @@ class smallBallon():
         self.image = load_image('ball21x21.png')
     def update(self):
         self.y += 5
+        if(self.y > 550):
+            self.y = 550
     def draw(self):
         self.image.draw(self.x, self.y)
 
@@ -51,6 +53,8 @@ class bigBallon():
         self.image = load_image('ball41x41.png')
     def update(self):
         self.y += 5
+        if(self.y > 550):
+            self.y = 550
     def draw(self):
         self.image.draw(self.x, self.y)
 
